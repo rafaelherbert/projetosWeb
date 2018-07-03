@@ -1,0 +1,133 @@
+//EFEITO DOS PAISES _________________________________________________________________________________________________________________________
+
+.links-projetos{
+    width:100%;
+    background:$cinza-escuro;
+    border-right:0.3px solid $branco;
+}
+
+.projeto-link{
+    float:left;
+    background-color:none;
+    color: white;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    width:100/4 + %;
+    cursor: pointer;
+    overflow: hidden;
+    margin-bottom:-0.5px;
+    margin-left:-0.1px;
+    position:relative;
+
+    
+        .projeto-img{
+            float:left;
+            max-width: 100%;
+            -webkit-transition: all 0.25s;
+            transition: ease all 0.25s;
+            transform: translateZ(0);
+        }
+
+        .projeto-mask{
+            position: absolute;
+            top:0;
+            right:0;
+            bottom:0;
+            left:0;
+            background-color: rgba(13,13,74,0.7);
+            opacity: 0;
+            -webkit-transition: all 0.25s;
+            transition: all 0.25s;
+            overflow:hidden;
+            transform: translateZ(0);
+            padding:8%;
+            
+                .projeto-titulo{
+                    font-family:Ubuntu;
+                    display:block;
+                    width:100%;
+                    font-size:20px;
+                    font-weight:bold;
+                    -webkit-transition: all 0.25s;
+                    transition: all 0.25s;
+                    }
+            
+                .projeto-data{
+                    font-family:Ubuntu;
+                    display:block;
+                    width:100%;
+                    font-size:5px;
+                    font-weight:normal;
+                    -webkit-transition: all 0.25s;
+                    transition: all 0.25s;
+                    }
+                }
+    
+    
+    &:hover .projeto-mask{
+        opacity:1;
+    }
+    
+    &:hover .projeto-titulo{
+        @include tipo-2(30);
+        opacity:1;
+    }   
+    
+    &:hover .projeto-data{
+        @include tipo-2(18);
+        opacity:1;
+    }   
+    
+    &:hover .projeto-img{
+        -ms-transform: scale(1.2, 1.2); /* IE 9 */
+        -webkit-transform: scale(1.2, 1.2); /* Safari */
+        transform: scale(1.2, 1.2);
+    }
+    
+    @include d(s){
+        width:100%;
+    }
+    @include d(m){
+        width:100/2 + %;
+    }
+}
+
+//EFEITO DOS PAISES _________________________________________________________________________________________________________________________
+
+
+.orcamento{
+    width:100%;
+    padding:100px 0;
+    background:url("../../img/logo-pattern.jpg") repeat center top;
+    
+    .titulo-orcamento{
+        color:$cinza-escuro;
+        margin-bottom:0;
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

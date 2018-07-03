@@ -1,0 +1,438 @@
+@import 'reset';
+@import 'grid';
+@import 'variaveis-e-mixins';
+@import 'geral';
+
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../../fonts/icomoon.eot?x87mvd');
+  src:  url('../../fonts/icomoon.eot?x87mvd#iefix') format('embedded-opentype'),
+    url('../../fonts/icomoon.ttf?x87mvd') format('truetype'),
+    url('../../fonts/icomoon.woff?x87mvd') format('woff'),
+    url('../../fonts/icomoon.svg?x87mvd#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-location2:before {
+  content: "\e948";
+}
+.icon-earth:before {
+  content: "\e9ca";
+}
+.icon-google-plus:before {
+  content: "\ea8b";
+}
+.icon-facebook:before {
+  content: "\ea90";
+}
+.icon-whatsapp:before {
+  content: "\ea93";
+}
+.icon-twitter:before {
+  content: "\ea96";
+}
+.icon-youtube:before {
+  content: "\ea9d";
+}
+
+
+
+//MAIN SECTION
+
+ .header{
+        position:fixed;
+        top:0;
+        width:100%;
+        padding:13px 0;
+        background-color:$cinza-escuro;
+        z-index:999;
+    }
+
+        .menu-nav{
+                text-align: right;
+                padding: 10px 0 0 0;
+
+                ul {
+                    padding: 0px;
+                    margin: 0px;
+
+                    li {
+                        display: inline-block;
+                        text-align: right;               
+
+                        .menu-link{
+                            @include tipo-2(14);
+                            color:white;
+                            text-decoration:none;
+                            text-transform:uppercase;
+                            font-weight:bold;
+                            margin-left:20px;
+                            padding:20px 0;
+                        }
+                    }   
+                }
+        } 
+
+
+
+.main{
+    margin-top:68px;
+    width:100%;
+    height:400px;
+    background:url('../../img/header-bg.png') bottom;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    padding:50px 0;
+    
+    .titulo{
+        margin-top:0;
+    }
+    
+}
+
+//SEÇÂO VIAGENS
+
+.viagens{
+    width:100%;
+    background-color:$branco;
+    padding-bottom:30px;   
+}
+
+.viagem{
+    display:block;
+    -webkit-box-shadow: 0px 0px 106px 4px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 106px 4px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 106px 4px rgba(0,0,0,0.75);
+    text-decoration:none;
+    outline:none;
+    position:relative;
+    bottom:100px;
+    margin-bottom:-100px;
+    z-index:1;
+    
+    .viagem-info{
+    background-color:white;
+    padding:20px 0;
+        
+        .viagem-titulo{
+            @include tipo-1(18);
+            color:$azul;
+            text-align:center;
+        }
+        
+        .viagem-preco{
+            margin-top:10px;
+            @include tipo-2(14);
+            font-weight:bold;
+            color:$cinza-escuro;
+            text-align:center;
+            
+            .preco{
+                @include tipo-2(30);
+                font-weight:bold;
+                color:$cinza-escuro;
+            }
+        }
+        
+    }
+    
+    
+}
+
+
+//SLIDES
+
+.avaliacoes{
+    width:100%;
+    background-image: linear-gradient(45deg, $azul, $verde);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    
+    div{
+        width:940px;
+        height:100%;
+        padding:50px 0;
+            
+                .cliente-foto{
+                    border-radius:100%;
+                    border:5px solid white;
+                    margin:auto;
+                }
+
+                 .cliente-name{
+                    @include tipo-2(18);
+                     color:white;
+                     font-weight:bold;
+                     text-align:center;
+                     padding:10px 0;
+                }
+
+                 .cliente-quote{
+                    @include tipo-2(18);
+                    color:white;
+                    text-align:center;;
+                    padding:10px 0;
+                }
+        }
+    
+}
+
+.slides {
+	position: relative;
+	overflow: hidden;
+    
+        > * {
+        position: absolute;
+        opacity: 0;
+        -webkit-transition:.5s;
+    }
+        > .active {
+        position: relative;
+        opacity: 1;
+        overflow: hidden;
+    }
+    
+}
+
+.paises{
+    width:100%;
+    overflow:hidden;
+}
+
+.flag-link{
+    float:left;
+    background-color:none;
+    color: white;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    width:100/3 + %;
+    cursor: pointer;
+    -webkit-transition: all 0.25s;
+    transition: all 0.25s;
+    position:relative;
+    overflow: hidden;
+    
+        .flag{
+            float:left;
+            max-width: 100%;
+            -webkit-transition: all 0.25s;
+            transition: ease all 0.25s;
+            transform: translateZ(0);
+        }
+
+        .mask{
+            position: absolute;
+            top: -1px;
+            right: -1px;
+            bottom: -1px;
+            left:-1px;
+            background-color: rgba(3,47,85,0.9);
+            opacity: 0;
+            -webkit-transition: all 0.25s;
+            transition: all 0.25s;
+            display:flex;
+            flex-direction:column;
+            flex-wrap:wrap;
+            justify-content:center;
+            overflow:hidden;
+            transform: translateZ(0);
+            padding:1px;
+            
+                .trip-title{
+                    display:block;
+                    width:100%;
+                    @include tipo-1(18);
+                    -webkit-transition: all 0.25s;
+                    transition: all 0.25s;
+                    text-align:center;
+                    }
+            
+                .trip-place{
+                    display:block;
+                    width:100%;
+                    @include tipo-2(14);
+                    -webkit-transition: all 0.25s;
+                    transition: all 0.25s;
+                    text-align:center; 
+                    opacity:0;
+                    text-transform:uppercase;
+                    font-weight:bold;
+                    position:absolute;
+                    bottom:-100px;
+                      
+                      span{
+                          font-size:1.5em;
+                          color:$azul;
+                      }
+
+                }
+
+
+        }
+    
+    
+    &:hover .mask{
+        opacity:1;
+    }
+    
+    &:hover .trip-title{
+        @include tipo-1(36);
+        opacity:1;
+    }
+    
+    &:hover .trip-place{
+        opacity:1;
+        bottom:5px;
+    }
+    
+    &:hover .flag{
+        -ms-transform: scale(1.1, 1.1); /* IE 9 */
+        -webkit-transform: scale(1.1, 1.1); /* Safari */
+        transform: scale(1.1, 1.1);
+    }
+    
+       
+}
+
+
+
+
+.footer{
+    width:100%;
+    background:url('../../img/footer-bg.jpg');
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    padding-top:30px;
+    
+        .topic{
+            @include tipo-1(14);
+            color:white;
+            line-height:25px;
+            margin:40px 0;
+            text-align:center;
+            
+            li a{
+                text-decoration:none;
+                color:white;
+            }
+
+            .topic-title{
+                color:$azul;
+            }
+        }
+}
+
+
+  .redes-sociais{
+        display:flex;
+        justify-content:center;
+        
+        li{
+            float:left;
+             a{
+                padding:15px 20px 10px 20px;
+                display:inline-block;
+                text-decoration:none;
+                color:white;
+                 font-size:20px;
+             }
+            
+             .facebook{
+                 border-bottom:5px solid #283d68;
+                 -webkit-transition:0.5s;
+                 &:hover{
+                    -webkit-transition:0.5s;
+                    background-color:#283d68;
+                 }
+             }
+            
+            .google-plus{
+                 border-bottom:5px solid #de4b39;
+                 -webkit-transition:0.5s;
+                 &:hover{
+                    -webkit-transition:0.5s;
+                    background-color:#de4b39;
+                 }
+             }
+            
+            .whatsapp{
+                 border-bottom:5px solid #14dd69;
+                 -webkit-transition:0.5s;
+                 &:hover{
+                    -webkit-transition:0.5s;
+                    background-color:#14dd69;
+                 }
+             }
+            
+            .twitter{
+                 border-bottom:5px solid #55acef;
+                 -webkit-transition:0.5s;
+                 &:hover{
+                    -webkit-transition:0.5s;
+                    background-color:#55acef;
+                 }
+             }
+            
+            .youtube{
+                 border-bottom:5px solid #c4302c;
+                 -webkit-transition:0.5s;
+                 &:hover{
+                    -webkit-transition:0.5s;
+                    background-color:#c4302c;
+                 }
+             }
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

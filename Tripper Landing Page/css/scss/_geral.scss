@@ -1,0 +1,103 @@
+*, html{
+    box-sizing:border-box;
+    padding:0;
+    margin:0;
+}
+
+.clear-fix{
+    *zoom:1;
+    &::before,&::after{
+        content:"";
+        display:table;
+    }
+    &::after{
+        clear:both;
+    }
+}
+
+img {
+	display: block;
+	max-width: 100%;
+}
+
+.titulo{
+    @include tipo-1(52);
+    text-align:center;
+    color:white;
+    margin:30px 0;
+    padding:0 20px;
+}
+
+.texto-base{
+    @include tipo-2(18);
+    text-align:center;
+    color:white;
+    padding:0 20px;
+}
+
+.btn-container{
+    display:flex;
+    justify-content:center;
+    width:100%;
+    margin-top:30px;
+    text-transform:uppercase;
+    .btn-cinza{
+        vertical-align:top;
+        padding:13px 65px;
+        color:$cinza-escuro;
+        @include tipo-2(14);
+        font-weight:bold;
+        border-radius:5px;
+        background-color:none;
+        background:none;
+        border:2px solid $cinza-escuro;
+        text-decoration:none;
+        -webkit-transition:0.5s;
+        margin:0px 20px;
+        &:hover{
+            -webkit-transition:0.5s;
+            background-color:$cinza-escuro;
+            color:white;
+        }
+    }
+    
+        .btn-azul{
+        vertical-align:top;
+        padding:13px 65px;
+        color:$azul;
+        @include tipo-2(14);
+        font-weight:bold;
+        border-radius:5px;
+        background-color:none;
+        background:none;
+        border:2px solid $azul;
+        text-decoration:none;
+        -webkit-transition:0.5s;
+            margin:0px 20px;
+        &:hover{
+            -webkit-transition:0.5s;
+            background-color:$azul;
+            color:white;
+        }
+    }
+    
+        .btn-verde{
+        vertical-align:top;
+        padding:13px 65px;
+        color:$verde;
+        @include tipo-2(14);
+        font-weight:bold;
+        border-radius:5px;
+        background-color:none;
+        background:none;
+        border:2px solid $verde;
+        text-decoration:none;
+        -webkit-transition:0.5s;
+            margin:0px 20px;
+        &:hover{
+            -webkit-transition:0.5s;
+            background-color:$verde;
+            color:white;
+        }
+    }
+}

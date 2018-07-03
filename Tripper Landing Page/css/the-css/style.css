@@ -1,0 +1,746 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+.grid-1 {
+  width: calc(8.33333% - 20px);
+}
+
+.grid-2 {
+  width: calc(16.66667% - 20px);
+}
+
+.grid-3 {
+  width: calc(25% - 20px);
+}
+
+.grid-4 {
+  width: calc(33.33333% - 20px);
+}
+
+.grid-5 {
+  width: calc(41.66667% - 20px);
+}
+
+.grid-6 {
+  width: calc(50% - 20px);
+}
+
+.grid-7 {
+  width: calc(58.33333% - 20px);
+}
+
+.grid-8 {
+  width: calc(66.66667% - 20px);
+}
+
+.grid-9 {
+  width: calc(75% - 20px);
+}
+
+.grid-10 {
+  width: calc(83.33333% - 20px);
+}
+
+.grid-11 {
+  width: calc(91.66667% - 20px);
+}
+
+.grid-12 {
+  width: calc(100% - 20px);
+}
+
+[class^="grid-"] {
+  float: left;
+  min-height: 1px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+@media screen and (max-width: 759px) {
+  [class^="grid-"] {
+    width: 100%;
+    float: none;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+
+.offset-1 {
+  margin-left: calc(8.33333% + 10px);
+}
+
+.offset-2 {
+  margin-left: calc(16.66667% + 10px);
+}
+
+.offset-3 {
+  margin-left: calc(25% + 10px);
+}
+
+.offset-4 {
+  margin-left: calc(33.33333% + 10px);
+}
+
+.offset-5 {
+  margin-left: calc(41.66667% + 10px);
+}
+
+.offset-6 {
+  margin-left: calc(50% + 10px);
+}
+
+.offset-7 {
+  margin-left: calc(58.33333% + 10px);
+}
+
+.offset-8 {
+  margin-left: calc(66.66667% + 10px);
+}
+
+.offset-9 {
+  margin-left: calc(75% + 10px);
+}
+
+.offset-10 {
+  margin-left: calc(83.33333% + 10px);
+}
+
+.offset-11 {
+  margin-left: calc(91.66667% + 10px);
+}
+
+.offset-12 {
+  margin-left: calc(100% + 10px);
+}
+
+@media screen and (max-width: 759px) {
+  .offset-1, .offset-2, .offset-3, .offset-4, .offset-5, .offset-6, .offset-7, .offset-8, .offset-9, .offset-10, .offset-11, .offset-12 {
+    margin-left: 0px;
+  }
+}
+
+.container {
+  max-width: 960px;
+  margin: 0px auto;
+  position: relative;
+}
+
+@media screen and (min-width: 760px) and (max-width: 959px) {
+  .container {
+    max-width: 760px;
+  }
+}
+
+@media screen and (max-width: 759px) {
+  .container {
+    max-width: 480px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+.container::after, .container::before {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.row {
+  position: relative;
+  margin-left: -10px;
+  margin-right: -10px;
+}
+
+@media screen and (max-width: 759px) {
+  .row {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+
+.row::after, .row::before {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+*, html {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.clear-fix {
+  *zoom: 1;
+}
+
+.clear-fix::before, .clear-fix::after {
+  content: "";
+  display: table;
+}
+
+.clear-fix::after {
+  clear: both;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.titulo {
+  font-family: "Brandon Grotesque", monospace;
+  font-size: 3.25em;
+  line-height: 1.25em;
+  text-transform: uppercase;
+  text-align: center;
+  color: white;
+  margin: 30px 0;
+  padding: 0 20px;
+}
+
+.texto-base {
+  font-family: "Open Sans", serif;
+  font-size: 1.125em;
+  line-height: 1.38889em;
+  text-align: center;
+  color: white;
+  padding: 0 20px;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 30px;
+  text-transform: uppercase;
+}
+
+.btn-container .btn-cinza {
+  vertical-align: top;
+  padding: 13px 65px;
+  color: #191b1e;
+  font-family: "Open Sans", serif;
+  font-size: 0.875em;
+  line-height: 1.5em;
+  font-weight: bold;
+  border-radius: 5px;
+  background-color: none;
+  background: none;
+  border: 2px solid #191b1e;
+  text-decoration: none;
+  -webkit-transition: 0.5s;
+  margin: 0px 20px;
+}
+
+.btn-container .btn-cinza:hover {
+  -webkit-transition: 0.5s;
+  background-color: #191b1e;
+  color: white;
+}
+
+.btn-container .btn-azul {
+  vertical-align: top;
+  padding: 13px 65px;
+  color: #00999a;
+  font-family: "Open Sans", serif;
+  font-size: 0.875em;
+  line-height: 1.5em;
+  font-weight: bold;
+  border-radius: 5px;
+  background-color: none;
+  background: none;
+  border: 2px solid #00999a;
+  text-decoration: none;
+  -webkit-transition: 0.5s;
+  margin: 0px 20px;
+}
+
+.btn-container .btn-azul:hover {
+  -webkit-transition: 0.5s;
+  background-color: #00999a;
+  color: white;
+}
+
+.btn-container .btn-verde {
+  vertical-align: top;
+  padding: 13px 65px;
+  color: #4cba44;
+  font-family: "Open Sans", serif;
+  font-size: 0.875em;
+  line-height: 1.5em;
+  font-weight: bold;
+  border-radius: 5px;
+  background-color: none;
+  background: none;
+  border: 2px solid #4cba44;
+  text-decoration: none;
+  -webkit-transition: 0.5s;
+  margin: 0px 20px;
+}
+
+.btn-container .btn-verde:hover {
+  -webkit-transition: 0.5s;
+  background-color: #4cba44;
+  color: white;
+}
+
+@font-face {
+  font-family: 'icomoon';
+  src: url("../../fonts/icomoon.eot?x87mvd");
+  src: url("../../fonts/icomoon.eot?x87mvd#iefix") format("embedded-opentype"), url("../../fonts/icomoon.ttf?x87mvd") format("truetype"), url("../../fonts/icomoon.woff?x87mvd") format("woff"), url("../../fonts/icomoon.svg?x87mvd#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-location2:before {
+  content: "\e948";
+}
+
+.icon-earth:before {
+  content: "\e9ca";
+}
+
+.icon-google-plus:before {
+  content: "\ea8b";
+}
+
+.icon-facebook:before {
+  content: "\ea90";
+}
+
+.icon-whatsapp:before {
+  content: "\ea93";
+}
+
+.icon-twitter:before {
+  content: "\ea96";
+}
+
+.icon-youtube:before {
+  content: "\ea9d";
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 13px 0;
+  background-color: #191b1e;
+  z-index: 999;
+}
+
+.menu-nav {
+  text-align: right;
+  padding: 10px 0 0 0;
+}
+
+.menu-nav ul {
+  padding: 0px;
+  margin: 0px;
+}
+
+.menu-nav ul li {
+  display: inline-block;
+  text-align: right;
+}
+
+.menu-nav ul li .menu-link {
+  font-family: "Open Sans", serif;
+  font-size: 0.875em;
+  line-height: 1.5em;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-left: 20px;
+  padding: 20px 0;
+}
+
+.main {
+  margin-top: 68px;
+  width: 100%;
+  height: 400px;
+  background: url("../../img/header-bg.png") bottom;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  padding: 50px 0;
+}
+
+.main .titulo {
+  margin-top: 0;
+}
+
+.viagens {
+  width: 100%;
+  background-color: #e9eff2;
+  padding-bottom: 30px;
+}
+
+.viagem {
+  display: block;
+  -webkit-box-shadow: 0px 0px 106px 4px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 106px 4px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 106px 4px rgba(0, 0, 0, 0.75);
+  text-decoration: none;
+  outline: none;
+  position: relative;
+  bottom: 100px;
+  margin-bottom: -100px;
+  z-index: 1;
+}
+
+.viagem .viagem-info {
+  background-color: white;
+  padding: 20px 0;
+}
+
+.viagem .viagem-info .viagem-titulo {
+  font-family: "Brandon Grotesque", monospace;
+  font-size: 1.125em;
+  text-transform: uppercase;
+  color: #00999a;
+  text-align: center;
+}
+
+.viagem .viagem-info .viagem-preco {
+  margin-top: 10px;
+  font-family: "Open Sans", serif;
+  font-size: 0.875em;
+  line-height: 1.5em;
+  font-weight: bold;
+  color: #191b1e;
+  text-align: center;
+}
+
+.viagem .viagem-info .viagem-preco .preco {
+  font-family: "Open Sans", serif;
+  font-size: 1.875em;
+  font-weight: bold;
+  color: #191b1e;
+}
+
+.avaliacoes {
+  width: 100%;
+  background-image: linear-gradient(45deg, #00999a, #4cba44);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avaliacoes div {
+  width: 940px;
+  height: 100%;
+  padding: 50px 0;
+}
+
+.avaliacoes div .cliente-foto {
+  border-radius: 100%;
+  border: 5px solid white;
+  margin: auto;
+}
+
+.avaliacoes div .cliente-name {
+  font-family: "Open Sans", serif;
+  font-size: 1.125em;
+  line-height: 1.38889em;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.avaliacoes div .cliente-quote {
+  font-family: "Open Sans", serif;
+  font-size: 1.125em;
+  line-height: 1.38889em;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.slides {
+  position: relative;
+  overflow: hidden;
+}
+
+.slides > * {
+  position: absolute;
+  opacity: 0;
+  -webkit-transition: .5s;
+}
+
+.slides > .active {
+  position: relative;
+  opacity: 1;
+  overflow: hidden;
+}
+
+.paises {
+  width: 100%;
+  overflow: hidden;
+}
+
+.flag-link {
+  float: left;
+  background-color: none;
+  color: white;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  width: 33.33333%;
+  cursor: pointer;
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+  position: relative;
+  overflow: hidden;
+}
+
+.flag-link .flag {
+  float: left;
+  max-width: 100%;
+  -webkit-transition: all 0.25s;
+  transition: ease all 0.25s;
+  transform: translateZ(0);
+}
+
+.flag-link .mask {
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  bottom: -1px;
+  left: -1px;
+  background-color: rgba(3, 47, 85, 0.9);
+  opacity: 0;
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  overflow: hidden;
+  transform: translateZ(0);
+  padding: 1px;
+}
+
+.flag-link .mask .trip-title {
+  display: block;
+  width: 100%;
+  font-family: "Brandon Grotesque", monospace;
+  font-size: 1.125em;
+  text-transform: uppercase;
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+  text-align: center;
+}
+
+.flag-link .mask .trip-place {
+  display: block;
+  width: 100%;
+  font-family: "Open Sans", serif;
+  font-size: 0.875em;
+  line-height: 1.5em;
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+  text-align: center;
+  opacity: 0;
+  text-transform: uppercase;
+  font-weight: bold;
+  position: absolute;
+  bottom: -100px;
+}
+
+.flag-link .mask .trip-place span {
+  font-size: 1.5em;
+  color: #00999a;
+}
+
+.flag-link:hover .mask {
+  opacity: 1;
+}
+
+.flag-link:hover .trip-title {
+  font-family: "Brandon Grotesque", monospace;
+  font-size: 2.25em;
+  text-transform: uppercase;
+  opacity: 1;
+}
+
+.flag-link:hover .trip-place {
+  opacity: 1;
+  bottom: 5px;
+}
+
+.flag-link:hover .flag {
+  -ms-transform: scale(1.1, 1.1);
+  /* IE 9 */
+  -webkit-transform: scale(1.1, 1.1);
+  /* Safari */
+  transform: scale(1.1, 1.1);
+}
+
+.footer {
+  width: 100%;
+  background: url("../../img/footer-bg.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  padding-top: 30px;
+}
+
+.footer .topic {
+  font-family: "Brandon Grotesque", monospace;
+  font-size: 0.875em;
+  text-transform: uppercase;
+  color: white;
+  line-height: 25px;
+  margin: 40px 0;
+  text-align: center;
+}
+
+.footer .topic li a {
+  text-decoration: none;
+  color: white;
+}
+
+.footer .topic .topic-title {
+  color: #00999a;
+}
+
+.redes-sociais {
+  display: flex;
+  justify-content: center;
+}
+
+.redes-sociais li {
+  float: left;
+}
+
+.redes-sociais li a {
+  padding: 15px 20px 10px 20px;
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+}
+
+.redes-sociais li .facebook {
+  border-bottom: 5px solid #283d68;
+  -webkit-transition: 0.5s;
+}
+
+.redes-sociais li .facebook:hover {
+  -webkit-transition: 0.5s;
+  background-color: #283d68;
+}
+
+.redes-sociais li .google-plus {
+  border-bottom: 5px solid #de4b39;
+  -webkit-transition: 0.5s;
+}
+
+.redes-sociais li .google-plus:hover {
+  -webkit-transition: 0.5s;
+  background-color: #de4b39;
+}
+
+.redes-sociais li .whatsapp {
+  border-bottom: 5px solid #14dd69;
+  -webkit-transition: 0.5s;
+}
+
+.redes-sociais li .whatsapp:hover {
+  -webkit-transition: 0.5s;
+  background-color: #14dd69;
+}
+
+.redes-sociais li .twitter {
+  border-bottom: 5px solid #55acef;
+  -webkit-transition: 0.5s;
+}
+
+.redes-sociais li .twitter:hover {
+  -webkit-transition: 0.5s;
+  background-color: #55acef;
+}
+
+.redes-sociais li .youtube {
+  border-bottom: 5px solid #c4302c;
+  -webkit-transition: 0.5s;
+}
+
+.redes-sociais li .youtube:hover {
+  -webkit-transition: 0.5s;
+  background-color: #c4302c;
+}
